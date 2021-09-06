@@ -89,3 +89,5 @@ void CWinOGLDemoView::OnLButtonDown(UINT nFlags, CPoint point)
 
 	CView::OnLButtonDown(nFlags, point);
 }
+
+// おわり
