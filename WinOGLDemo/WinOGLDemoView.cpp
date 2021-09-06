@@ -23,6 +23,7 @@
 IMPLEMENT_DYNCREATE(CWinOGLDemoView, CView)
 
 BEGIN_MESSAGE_MAP(CWinOGLDemoView, CView)
+	ON_WM_LBUTTONDOWN()
 END_MESSAGE_MAP()
 
 // CWinOGLDemoView コンストラクション/デストラクション
@@ -80,3 +81,11 @@ CWinOGLDemoDoc* CWinOGLDemoView::GetDocument() const // デバッグ以外のバ
 
 
 // CWinOGLDemoView メッセージ ハンドラー
+
+
+void CWinOGLDemoView::OnLButtonDown(UINT nFlags, CPoint point)
+{
+	// TODO: ここにメッセージ ハンドラー コードを追加するか、既定の処理を呼び出します。
+
+	CView::OnLButtonDown(nFlags, point);
+}
