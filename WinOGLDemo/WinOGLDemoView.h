@@ -1,8 +1,10 @@
-﻿#include <gl/GL.h>
+﻿
 // WinOGLDemoView.h : CWinOGLDemoView クラスのインターフェイス
 //
 
 #pragma once
+#include <gl/GL.h>
+#include "AdminControl.h"
 
 
 class CWinOGLDemoView : public CView
@@ -52,6 +54,8 @@ public:
 	afx_msg void OnDestroy();
 	afx_msg BOOL OnEraseBkgnd(CDC* pDC);
 	afx_msg void OnSize(UINT nType, int cx, int cy);
+private:
+	CAdminControl AC;
 };
 
 #ifndef _DEBUG  // WinOGLDemoView.cpp のデバッグ バージョン

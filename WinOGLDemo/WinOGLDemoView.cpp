@@ -65,14 +65,14 @@ void CWinOGLDemoView::OnDraw(CDC* pDC)
 	glClearColor(0.0, 0.0, 0.0, 1.0);
 	glClear(GL_COLOR_BUFFER_BIT /* | GL_DEPTH_BUFFER_BIT
 	*/);
-
-	glColor3f(1.0, 1.0, 1.0);
+	AC.Draw();
+	/*glColor3f(1.0, 1.0, 1.0);
 	glPointSize(5);
 
 	glBegin(GL_POINTS);
 
 	glVertex2f(ClickX, ClickY);
-	glEnd();
+	glEnd();*/
 
 	//glBegin(GL_LINE_LOOP);
 
