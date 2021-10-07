@@ -8,19 +8,24 @@ CAdminControl::CAdminControl()
 
 CAdminControl::~CAdminControl()
 {
-
+    vertex_head->FreeVertex();
 }
 
 void CAdminControl::Draw()
 {
-    float x = vertex_head->GetX();
-    float y = vertex_head->GetY();
     glColor3f(1.0, 1.0, 1.0);
     glPointSize(5);
-
     glBegin(GL_POINTS);
 
-    glVertex2f(x, y);
+    Vertex* nowV = vertex_head;
+
+    while (nowV != NULL)
+    {
+        glVertex2f(nowV->GetX(), nowV->GetY());
+
+        nowV = nowV->GetNext();
+    }
+
     glEnd();
     /*glColor3f(1.0, 1.0, 1.0);
     glPointSize(5);

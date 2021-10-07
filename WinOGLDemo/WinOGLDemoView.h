@@ -5,6 +5,7 @@
 #pragma once
 #include <gl/GL.h>
 #include "AdminControl.h"
+#include "pch.h"
 
 
 class CWinOGLDemoView : public CView

@@ -1,6 +1,7 @@
 #pragma onc
 #include <gl/GL.h>
 #include "Vertex.h"
+#include "pch.h"
 
 class CAdminControl
 {

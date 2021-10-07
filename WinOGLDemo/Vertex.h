@@ -1,5 +1,6 @@
 #pragma once
 #include <stdio.h> 
+#include "pch.h"
 
 class Vertex
 {
@@ -28,7 +29,7 @@ public:
 	Vertex* GetNext();
 
 	//　次の頂点リストを指すポインタを書き込む
-	void SetNext(Vertex* vertex);
+	Vertex* SetNext(Vertex* vertex);
 
 	void FreeVertex();
 };

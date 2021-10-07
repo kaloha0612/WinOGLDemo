@@ -138,6 +138,10 @@ void CWinOGLDemoView::OnLButtonDown(UINT nFlags, CPoint point)
 		ClickY = ClickY * hi;
 	}
 	/*---------------------------------*/
+
+
+	AC.AppendVertex(ClickX, ClickY);
+
 	RedrawWindow();
 	CView::OnLButtonDown(nFlags, point);
 }

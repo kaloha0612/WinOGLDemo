@@ -1,3 +1,4 @@
+#include "pch.h"
 #include "Vertex.h"
 
 Vertex::Vertex()
@@ -46,13 +47,23 @@ int Vertex::GetY()
 
 
 //　次の頂点リストを指すポインタを書き込む
-void Vertex::SetNext(Vertex* vertex)
+Vertex* Vertex::SetNext(Vertex* vertex)
 {
-	next_vertex = vertex;
+	return next_vertex = vertex;
 }
 
 //　次の頂点リストを指すポインタを読み込む
 Vertex* Vertex::GetNext()
 {
 	return next_vertex;
+}
+
+void Vertex::FreeVertex()
+{
+	Vertex* nowV = this;
+	while (nowV != NULL) {
+		Vertex* del_cell = nowV;
+		nowV = nowV->GetNext();
+		delete del_cell;
+	}
 }
