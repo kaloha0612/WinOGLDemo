@@ -1,4 +1,4 @@
-﻿
+﻿#include <gl/GL.h>
 // WinOGLDemoView.h : CWinOGLDemoView クラスのインターフェイス
 //
 
@@ -14,6 +14,12 @@ protected: // シリアル化からのみ作成します。
 // 属性
 public:
 	CWinOGLDemoDoc* GetDocument() const;
+//	double ClickX;
+//	double ClickY;
+
+private:
+	double ClickX;
+	double ClickY;
 
 // 操作
 public:
@@ -39,6 +45,13 @@ protected:
 	DECLARE_MESSAGE_MAP()
 public:
 	afx_msg void OnLButtonDown(UINT nFlags, CPoint point);
+private:
+	HGLRC m_hRC;
+public:
+	afx_msg int OnCreate(LPCREATESTRUCT lpCreateStruct);
+	afx_msg void OnDestroy();
+	afx_msg BOOL OnEraseBkgnd(CDC* pDC);
+	afx_msg void OnSize(UINT nType, int cx, int cy);
 };
 
 #ifndef _DEBUG  // WinOGLDemoView.cpp のデバッグ バージョン
