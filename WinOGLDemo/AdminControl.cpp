@@ -14,7 +14,7 @@ CAdminControl::~CAdminControl()
 void CAdminControl::Draw()
 {
     glColor3f(1.0, 1.0, 1.0);
-    glPointSize(5);
+    glPointSize(10);
     glBegin(GL_POINTS);
 
     Vertex* nowV = vertex_head;
