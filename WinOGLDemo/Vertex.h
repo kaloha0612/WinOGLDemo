@@ -22,6 +22,7 @@ public:
 
 	//　頂点のX座標を読み込む込む
 	float GetX();
+
 	//　頂点のY座標を読み込む
 	float GetY();
 

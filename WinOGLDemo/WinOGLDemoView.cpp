@@ -140,7 +140,7 @@ void CWinOGLDemoView::OnLButtonDown(UINT nFlags, CPoint point)
 	/*---------------------------------*/
 
 
-	AC.AppendVertex(ClickX, ClickY);
+	AC.CreateShape(ClickX, ClickY);
 
 	RedrawWindow();
 	CView::OnLButtonDown(nFlags, point);
